@@ -13,10 +13,50 @@
       color: #333;
     }
 
+    /* Navigation */
+    .nav-bar {
+      background-color: #1e3a8a;
+      padding: 1rem 0;
+      color: white;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.2s;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background-color: #1e3a8a;
       color: white;
-      padding: 1rem 0;
+      padding: 2rem 0 1rem;
       text-align: center;
     }
 
@@ -91,57 +131,88 @@
       padding: 1rem;
       margin-top: 3rem;
     }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Geovani C.Ltd (GD) - Services</h1>
-    <p>Reliable, affordable, and professional cleaning solutions</p>
-  </header>
-
-  <div class="container">
-    <h2>Our Services</h2>
-
-    <div class="service-grid">
-      <!-- Service 1 -->
-      <div class="service-card">
-        <img src="https://source.unsplash.com/300x200/?house,cleaning" alt="Residential Cleaning">
-        <h3>Residential Cleaning</h3>
-        <p>We clean houses, apartments, and condos with care and detail.</p>
-        <p class="price">From $30 per visit</p>
-        <button class="btn">Book Now</button>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-card">
-        <img src="https://source.unsplash.com/300x200/?office,cleaning" alt="Office Cleaning">
-        <h3>Office Cleaning</h3>
-        <p>Professional and discreet cleaning for offices and workspaces.</p>
-        <p class="price">From $50 per session</p>
-        <button class="btn">Book Now</button>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <img src="https://source.unsplash.com/300x200/?carpet,cleaning" alt="Carpet Cleaning">
-        <h3>Carpet & Upholstery</h3>
-        <p>Deep cleaning for carpets, sofas, and more.</p>
-        <p class="price">From $20 per room</p>
-        <button class="btn">Book Now</button>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="service-card">
-        <img src="https://source.unsplash.com/300x200/?window,cleaning" alt="Window Cleaning">
-        <h3>Window Cleaning</h3>
-        <p>Crystal-clear windows using eco-safe products.</p>
-        <p class="price">From $15 per set</p>
-        <button class="btn">Book Now</button>
+  <!-- Navigation -->
+  <div class="nav-bar">
+    <div class="nav-container">
+      <div class="nav-logo">Geovani C.Ltd (GD)</div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
   </div>
 
+  <!-- Page Header -->
+  <header>
+    <h1>Our Cleaning Services</h1>
+    <p>Reliable, affordable, and professional cleaning solutions</p>
+  </header>
+
+  <!-- Services Section -->
+  <div class="container">
+    <h2>What We Offer</h2>
+
+    <div class="service-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <img src="../assets/home.jpg" alt="Residential Cleaning">
+        <h3>Residential Cleaning</h3>
+        <p>We clean houses, apartments, and condos with care and detail.</p>
+        <p class="price">From $30 per visit</p>
+        <a href="../page/book.html" class="btn">Book Now</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <img src="../assets/offfi.jpg" alt="Office Cleaning">
+        <h3>Office Cleaning</h3>
+        <p>Professional and discreet cleaning for offices and workspaces.</p>
+        <p class="price">From $50 per session</p>
+        <a href="../page/book.html" class="btn">Book Now</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <img src="../assets/carpet.jpeg" alt="Carpet Cleaning">
+        <h3>Carpet & Upholstery</h3>
+        <p>Deep cleaning for carpets, sofas, and more.</p>
+        <p class="price">From $20 per room</p>
+        <a href="../page/book.html" class="btn">Book Now</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <img src="../assets/window.jpg" alt="Window Cleaning">
+        <h3>Window Cleaning</h3>
+        <p>Crystal-clear windows using eco-safe products.</p>
+        <p class="price">From $15 per set</p>
+        <a href="../page/book.html" class="btn">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Geovani C.Ltd (GD) | All rights reserved.</p>
   </footer>
